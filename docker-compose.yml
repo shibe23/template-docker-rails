@@ -38,6 +38,7 @@ services:
       file: ./docker/mysql/password.yml
       service: password
   db:
+    command: "--innodb_use_native_aio=0"
     build:
       context: .
       dockerfile: ./docker/mysql/Dockerfile
